@@ -2,8 +2,9 @@
 
 echo "Saisir le nombre d'adultes : ";
 $nbAdultes = fgets ( STDIN ) ;
-$prixreduit = $nbAdultes / 7 ;
-$prixplein =  $nbAdultes % 7 ;
-echo " prix a payer : " , ( $prixplein * 7 ) * 15 ;
+$prixreduit = intval ($nbAdultes % 7) ;
+$prixplein =  intval ($nbAdultes / 7) ;
+$prix = $prixplein*7*15+$prixreduit*18 ; 
+echo " prix a payer : " , $prix ;
 
 ?>
